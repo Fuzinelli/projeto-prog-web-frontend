@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpService {
-url = "http://localhost:8080";
-// url = "https://projeto-prog-web-backend.herokuapp.com";
+// url = "http://localhost:8080";
+url = "https://projeto-prog-web-backend.herokuapp.com";
   constructor(private http: HttpClient) {
 
    }
