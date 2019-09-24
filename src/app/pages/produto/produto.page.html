@@ -6,14 +6,20 @@
 
 <ion-content>
   <ion-button (click)="dismiss()">voltar</ion-button>
-  <ion-list>
-    <ion-item *ngFor="let cliente of clientes">
-      id: {{cliente.id}}
-
-      
-      produto: {{cliente.nome}}
-      
-      preço: {{cliente.preco}}
-    </ion-item>
-  </ion-list>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NOME</th>
+        <th scope="col">PREÇO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <th scope="col">{{produto.id}}</th>
+        <th scope="col">{{produto.nome}}</th>
+        <th scope="col">{{produto.preco}}</th>
+      </tr>
+    </tbody>
+  </table>
 </ion-content>
