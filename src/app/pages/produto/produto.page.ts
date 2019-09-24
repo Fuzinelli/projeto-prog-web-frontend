@@ -26,4 +26,10 @@ export class ProdutoPage implements OnInit {
       'dismissed': true
     });
   }
+  excluir(id){
+    this.clienteService.excluirProduto(id).subscribe(data => {
+      this.getAll();
+  
+    })
+  }
 }

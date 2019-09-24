@@ -21,4 +21,62 @@
     Listagem de vendas
   </ion-button>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        Formulário Clientes
+        <ion-item>
+          <ion-label position="floating">id</ion-label>
+          <ion-input [(ngModel)]="idCliente"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input [(ngModel)]="nomeCliente"></ion-input>
+        </ion-item>
+        <ion-button color="success" (click)="cadastrarCliente()">Cadastrar</ion-button>
+        <ion-button color="danger" (click)="atualizarCliente()">Atualizar</ion-button>
+
+      </ion-col>
+      <ion-col>
+        Formulário Produtos
+        <ion-item>
+          <ion-label position="floating">id</ion-label>
+          <ion-input [(ngModel)]="idProduto"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input [(ngModel)]="nomeProduto"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Preço</ion-label>
+          <ion-input [(ngModel)]="precoProduto"></ion-input>
+        </ion-item>
+        <ion-button color="success" (click)="cadastrarProduto()">Cadastrar</ion-button>
+        <ion-button color="danger" (click)="atualizarProduto()">Atualizar</ion-button>
+
+     
+        
+      </ion-col>
+      <ion-col>
+        Formulário Vendas
+        <ion-item>
+          <ion-label position="floating">id</ion-label>
+          <ion-input [(ngModel)]="idVenda"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Data</ion-label>
+          <ion-input [(ngModel)]="dataVenda"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Cliente Id</ion-label>
+          <ion-input [(ngModel)]="vendaClienteId"></ion-input>
+        </ion-item>
+        <ion-button color="success" (click)="cadastrarVenda()">Cadastrar</ion-button>
+        <ion-button color="danger" (click)="atualizarVenda()">Atualizar</ion-button>
+
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

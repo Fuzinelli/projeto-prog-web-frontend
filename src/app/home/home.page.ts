@@ -11,12 +11,19 @@ import { VendaPage } from '../pages/venda/venda.page';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(public modalController: ModalController) {
+  constructor(private httpService: HttpService, public modalController: ModalController) {
     
   }
 
-
-
+  nomeCliente;
+  idCliente;
+  nomeProduto;
+  idProduto;
+  precoProduto;
+  dataVenda;
+  vendaClienteId;
+  idVenda;
+  
  
 
   async abrirPaginaClientes(){
@@ -39,6 +46,38 @@ export class HomePage {
       component: VendaPage
     });
     return await modal.present();
+  }
+
+
+  cadastrarCliente(){
+    this.httpService.cadastrarCliente(this.nomeCliente).subscribe(data => {
+
+    })
+  }
+  atualizarCliente(){
+    this.httpService.atualizarCliente(this.idCliente,this.nomeCliente).subscribe(data => {
+
+    })
+  }
+  cadastrarProduto(){
+    this.httpService.cadastrarProduto(this.nomeProduto, this.precoProduto).subscribe(data => {
+
+    })
+  }
+  atualizarProduto(){
+    this.httpService.atualizarProduto(this.idProduto,this.nomeProduto, this.precoProduto).subscribe(data => {
+
+    })
+  }
+  cadastrarVenda(){
+    this.httpService.cadastrarVenda(this.dataVenda, this.vendaClienteId).subscribe(data => {
+
+    })
+  }
+  atualizarVenda(){
+    this.httpService.atualizarVenda(this.idVenda,this.dataVenda, this.vendaClienteId).subscribe(data => {
+
+    })
   }
 
 }

@@ -14,6 +14,8 @@
         <th scope="col">ID</th>
         <th scope="col">NOME</th>
         <th scope="col">PREÇO</th>
+        <th scope="col">AÇOES</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -21,6 +23,8 @@
         <th scope="col">{{produto.id}}</th>
         <th scope="col">{{produto.nome}}</th>
         <th scope="col">{{produto.preco}}</th>
+        <th>  <ion-fab-button (click)="excluir(produto.id)" color="danger"><ion-icon name="trash"></ion-icon></ion-fab-button>
+        </th>
       </tr>
     </tbody>
   </table>

@@ -21,7 +21,12 @@ export class ClientePage implements OnInit {
       this.clientes = data;
     })
 }
+excluir(id){
+  this.clienteService.excluirCliente(id).subscribe(data => {
+    this.getAll();
 
+  })
+}
 dismiss() {
   // using the injected ModalController this page
   // can "dismiss" itself and optionally pass back data

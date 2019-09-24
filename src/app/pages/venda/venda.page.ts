@@ -26,4 +26,10 @@ export class VendaPage implements OnInit {
       'dismissed': true
     });
   }
+  excluir(id){
+    this.clienteService.excluirVenda(id).subscribe(data => {
+      this.getAll();
+  
+    })
+  }
 }

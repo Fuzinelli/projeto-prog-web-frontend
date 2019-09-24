@@ -14,6 +14,7 @@
       <th scope="col">ID</th>
       <th scope="col">DATA</th>
       <th scope="col">CLIENTE</th>
+      <th scope="col">AÇOES</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,8 @@
       <th scope="col">{{venda.id}}</th>
       <th scope="col">{{venda.data}}</th>
       <th scope="col">{{venda.cliente_id}}</th>
+      <th>  <ion-fab-button (click)="excluir(venda.id)" color="danger"><ion-icon name="trash"></ion-icon></ion-fab-button>
+      </th>
     </tr>
   </tbody>
 </table>
