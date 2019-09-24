@@ -8,6 +8,22 @@
 
 <ion-content>
 <ion-button (click)="dismiss()">voltar</ion-button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">DATA</th>
+      <th scope="col">CLIENTE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let venda of clientes">
+      <th scope="col">{{venda.id}}</th>
+      <th scope="col">{{venda.data}}</th>
+      <th scope="col">{{venda.cliente_id}}</th>
+    </tr>
+  </tbody>
+</table>
 <ion-list>
   <ion-item *ngFor="let venda of clientes">
     id: {{venda.id}}
